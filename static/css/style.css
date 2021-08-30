@@ -1,0 +1,653 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f2f2f2;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#root, body, html {
+    height: 100%;
+}
+
+#root {
+    overflow-x: hidden;
+}
+
+.App {
+    margin: 0 auto;
+    max-width: 840px;
+    background-color: #fff;
+    box-shadow: 0 0 16px rgb(32 43 74 / 32%);
+    width: 100%;
+	height: 100%;
+}
+
+.holds-the-iframe {
+/*    background: url(../images/bg.gif);*/
+	background-color: #f1cd13;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.Loadlogo {
+	animation: grow 1s;
+	
+	width: 40%;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	background-color: #f1cd13;
+}
+
+.Banner {
+    height: 50px;
+    background: #50b33e;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+	
+}
+
+.PlayGame {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.PlayGame-header-button {
+    width: 24px;
+    height: 24px;
+    padding: 12px 4px;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.PlayGame-header-button:first-child {
+    padding-left: 16px;
+}
+
+.PlayGame-header-button:last-child {
+    padding-right: 16px;
+}
+
+.PlayGame-header-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.PlayGame-header-title {
+    position: relative;
+}
+
+.PlayGame-header-innerTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0,2,81,.15);
+    padding: 5px 14px;
+    border-radius: 16px;
+    -webkit-user-select: none;
+}
+
+.PlayGame-header-thisTitle {
+    font-family: "DM Sans",sans-serif;
+    font-size: 16px;
+	font-weight: bold;
+}
+
+.Bannerhome {
+	width: 100%;
+    max-width: 840px;
+    margin: auto;
+    text-align: center;
+    height: 27px;
+    color: #ffffff;
+    background: #50b33e;
+    padding-top: 7px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+	font-size: 13px;
+    font-weight: bold;
+}
+
+.PlayGameWrapper {
+    height: 100%;
+}
+
+.GameGridWrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Header {
+    width: 100%;
+    height: 200px;
+    background: #f1cd13;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+/*	background-image: url(../images/bg.gif);*/
+    background-size: 100% 450px;
+    background-repeat: no-repeat;
+	background-position-x: center;
+}
+
+.LobbyHeaderImageGroup {
+    display: flex;
+    align-content: center;
+    z-index: 1;
+    width: 270px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.LobbyHeaderBFG {
+    margin-bottom: 8px;
+    align-self: flex-start;
+    position: relative;
+}
+
+.LobbyHeaderBFGImg {
+    width: 100%;
+}
+
+.GameGrid-Container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.GameGrid-BackgroundWrapper {
+    flex: 1 1 auto;
+/*    padding-bottom: 120px;*/
+}
+
+.GameGrid-ShelfLabel {
+    padding: 20px 20px 12px;
+    margin: 0;
+    color: #000251;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.GameGrid-GameListHeader {
+    color: #000251;
+    font-family: "Poppins",sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 20px 20px 0;
+}
+
+.GameGrid {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+
+.GameGrid-CategoryContainer {
+    padding-bottom: 5px;
+}
+
+.GameGrid-CategoryItems {
+    display: flex;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.GameGrid-game {
+    background: none;
+    border-radius: 15px;
+    cursor: pointer;
+    outline-color: transparent;
+    position: relative;
+    -webkit-transition: outline-color .16s linear;
+    transition: outline-color .16s linear;
+    box-sizing: border-box;
+    -webkit-transition: border-color .5s;
+    transition: border-color .5s;
+    overflow: hidden;
+    margin-bottom: 14px;
+    margin-right: 12px;
+    width: calc(25% - 19px);
+}
+
+.GameGrid-game a {
+    text-decoration: none;
+}
+
+.GameGrid-game-thumbnail {
+    border-radius: 12px;
+    width: 100%;
+    background-color: #2d3594;
+    position: relative;
+    padding-top: 75%;
+    object-fit: cover;
+}
+
+.GameGrid-game-thumbnailImg {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.PlayGame-iframe {
+    flex: 1 1 auto;
+    border: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: auto;
+}
+
+.buttonstart {
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	line-height: 12.8px;
+	border-radius: 5px;
+    margin-top: 20px;
+	height: 50px;
+    width: 250px;
+	background: white;
+	font-size: 20px;
+}
+
+#eacgamegrid {
+	border: solid #afafaf .1px;
+}
+
+
+/* Ad */
+
+#adcontainer {
+	height: 100%;
+    width: 100%;
+    text-align: center;
+	display: none;
+}
+
+#adtext {
+	left: 20px;
+    top: 70px;
+    position: absolute;
+}
+
+#btnAd {
+    background: #50b33e;
+    color: white;
+}
+
+#adsubtextcontainer {
+	width: 100%;
+	position: absolute;
+    bottom: 20px;
+	left: 0px;
+	z-index: 1;
+}
+
+#adsubtext {
+    font-size: 12px;
+    width: 500px;
+    margin: auto;
+}
+
+#adtimerdisplay {
+	margin-top: 25px;
+    font-size: 18px;
+}
+
+#covfefe {
+	color: rgb(201 82 200);
+}
+
+.adtitle {
+	text-align: center;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+.adimage {
+	max-height: 300px;
+	max-width: 300px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-height: 821px) {
+	
+#adtext {
+    left: 12px;
+    top: 70px;
+    font-size: 12px;
+}
+	
+.adtitle {
+    padding-bottom: 11px;
+    padding-top: 42px;
+    font-size: 12px;
+}
+	
+.slideshow-container {
+    max-width: 330px;
+}
+
+.mySlides {
+    height: 240px;
+    width: 240px;
+}
+	
+.adimage {
+    max-height: 240px;
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+	
+.prev, .next {
+    font-size: 24px;
+}
+	
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    margin-bottom: 12px;
+}
+
+#adsubtext {
+    font-size: 9px;
+    width: 270px;
+}
+	
+#adtimerdisplay {
+	font-size: 15px;
+}
+	
+}
+
+@media only screen and (max-width: 799px) {
+	
+.buttonstart {
+	margin-top: 9px;
+    width: 160px;
+    font-size: 15px;
+	height: 45px;
+}
+	
+#adtext {
+    left: 12px;
+    top: 70px;
+    font-size: 12px;
+}
+	
+.adtitle {
+    padding-bottom: 11px;
+    padding-top: 42px;
+    font-size: 12px;
+}
+	
+.slideshow-container {
+    max-width: 330px;
+}
+
+.mySlides {
+    height: 240px;
+    width: 240px;
+}
+	
+.adimage {
+    max-height: 240px;
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+	
+.prev, .next {
+    font-size: 24px;
+}
+	
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    margin-bottom: 12px;
+}
+
+#adsubtext {
+    font-size: 9px;
+    width: 270px;
+}
+	
+#adtimerdisplay {
+	font-size: 15px;
+}
+	
+#btnSelect {
+    margin-top: 13px;
+}
+	
+}
+
+/* Slideshow */
+.mySlides {
+	display: none;
+	margin: auto;
+	height: 300px;
+    width: 300px;
+}
+
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(201 82 200);
+  font-weight: bold;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  font-size: 35px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+	left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+/*  background-color: rgba(0,0,0,0.8);*/
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 20px;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 35px}
+}
+
+
+
+@keyframes grow {
+  0% {
+    transform: translate(-50%, -50%) scale(.3);
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
+.dot-spin {
+
+  left: 50%;
+  top: 65%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+	
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: transparent;
+  box-shadow: 0 -18px 0 0 #0e723a, 12.72984px -12.72984px 0 0 #0e723a, 18px 0 0 0 #0e723a, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), 0 18px 0 0 rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), -18px 0 0 0 rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
+  animation: dotSpin 1.5s infinite linear;
+}
+
+@keyframes dotSpin {
+  0%,
+  100% {
+    box-shadow: 0 -18px 0 0 #0e723a, 12.72984px -12.72984px 0 0 #0e723a, 18px 0 0 0 #0e723a, 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  12.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 0 #0e723a, 18px 0 0 0 #0e723a, 12.72984px 12.72984px 0 0 #0e723a, 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  25% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 0 #0e723a, 12.72984px 12.72984px 0 0 #0e723a, 0 18px 0 0 #0e723a, -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  37.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 0 #0e723a, 0 18px 0 0 #0e723a, -12.72984px 12.72984px 0 0 #0e723a, -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 0 #0e723a, -12.72984px 12.72984px 0 0 #0e723a, -18px 0 0 0 #0e723a, -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
+  }
+  62.5% {
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 #0e723a, -18px 0 0 0 #0e723a, -12.72984px -12.72984px 0 0 #0e723a;
+  }
+  75% {
+    box-shadow: 0 -18px 0 0 #0e723a, 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 0 #0e723a, -12.72984px -12.72984px 0 0 #0e723a;
+  }
+  87.5% {
+    box-shadow: 0 -18px 0 0 #0e723a, 12.72984px -12.72984px 0 0 #0e723a, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 #0e723a;
+  }
+}

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<title>GIF GAME</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<!--Fav Icons-->
+	<link rel="icon" href="favicon.ico?v=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=1">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=1">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?v=1">
+	<meta name="msapplication-TileColor" content="#00a300">
+	<meta name="theme-color" content="#ffffff">
+	
+	<!--CSS-->
+	<link rel="stylesheet" href="static/css/style.css">
+	
+</head>
+
+<body>
+	
+	<!--Button click sound-->
+	<audio id="clicksound" src="static/sounds/click_low.mp3"></audio>
+	<audio id="errorsound" src="static/sounds/click_2.mp3"></audio>
+
+	
+	<div id="root">
+		<div class="App">
+			<div class="Default PlayGameWrapper">
+				<div class="PlayGame">
+					
+						<div id="bfggames1" class="Banner">
+						<a class="PlayGame-header-button" aria-label="Go Home" href="index.html">
+							<img alt="Home" src="./static/images/home.svg">
+						</a>
+
+						<div class="PlayGame-header-title">
+							<div class="PlayGame-header-innerTitleContainer">
+								<!--Insert Game Name-->
+								<div class="PlayGame-header-thisTitle">GIF GAME</div>
+							</div>
+						</div>
+
+						<div class="PlayGame-header-button">
+							<img id="mute" alt="Mute Button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAAwklEQVQ4y9XTvy5EYRCG8Xc126wTVyGxoReFQii4HiSyjTsR8aegpKDfZOMe6CS2XSqan8JRbBRnlDvl5Hm+TOZ7J1msculAr4aeJgl4MizgJIljr/iw04n/CImBK7xb68B/hUTPNSYdeDvSo5XEsjfsz4N/qu0+JIkTXNQEthLreKkKR4k+vqrCYSt8VoXNxAaea8J9khjhvLLWO02iMcVe9eOW3GBcjUbjFjOrtfCNTDGz/Z94jzten9PO7C7AnX8D9g4xXYFchGoAAAAASUVORK5CYII=">
+						</div>
+					</div>
+					
+					
+					<div id="loading" class="holds-the-iframe">
+						<img alt="BFG Logo" class="Loadlogo" src="./static/images/bfglogotagline.png">
+						<div id="loadingdots" class="dot-spin"></div>
+					</div>
+					
+					<!--Ad-->
+					<div id="adcontainer">
+						<div id="adtext">Ad</div>
+
+						<!--Ad Content-->
+						<div id="adcontent" class="thisad">
+
+							<div id="adtitle" class="adtitle">Order-Up: A family friendly food matching card game</div>
+							<br>
+
+							<div class="slideshow-container">
+								<div class="mySlides fade">
+								  <img id="adimage1" alt="Ad image 1" src="./static/images/ads/orderup1.jpg" class="adimage">
+								</div>
+								<div class="mySlides fade">
+								  <img id="adimage2" alt="Ad image 2" src="./static/images/ads/orderup2.jpg" class="adimage">
+								</div>
+								<div class="mySlides fade">
+								  <img id="adimage3" alt="Ad image 3" src="./static/images/ads/orderup3.jpg" class="adimage">
+								</div>
+								<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+								<a class="next" onclick="plusSlides(1)">&#10095;</a>
+							</div>
+							<br>
+
+							<div style="text-align:center">
+							  <span class="dot" onclick="currentSlide(1)"></span> 
+							  <span class="dot" onclick="currentSlide(2)"></span> 
+							  <span class="dot" onclick="currentSlide(3)"></span> 
+							</div>
+						</div>
+						<button id="btnAd" class="buttonstart">Buy Now</button>
+						<div id="adtimerdisplay">5</div>
+						<div id="adbtnpos">
+						</div>
+						<br>
+						<div id="adsubtextcontainer">
+							<div id="adsubtext">Disclaimer: Buying sponsored products helps keep these games running and allows us to continue to build new free games.
+							<br>
+							<br>
+							<!--Dontate a coffee-->
+							<a id="covfefe" href="https://www.paypal.com/paypalme/bigfootgames" target="_blank">Dontate a ☕🍺🍪🧁🍜</a>
+						</div>
+
+						</div>	
+					</div>
+					
+					<!--Insert Link to Game-->
+					<iframe id="gameframe" title="Game" role="region" class="PlayGame-iframe" src="https://giphy-game.herokuapp.com/"></iframe>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--Javascript files-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="static/js/client.js"></script>
+	<script type="text/javascript" src="static/js/imageslideshow.js"></script>
+	
+</body>
+</html>
