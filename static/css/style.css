@@ -365,6 +365,12 @@ a:-webkit-any-link {
     margin-bottom: 20px;
 }
 
+@media only screen and (max-height: 550px) {
+	.Loadlogo {
+		width: 60%;
+	}
+}
+
 @media only screen and (max-height: 821px) {
 	
 #adtext {
