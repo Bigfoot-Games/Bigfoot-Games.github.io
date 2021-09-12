@@ -46,6 +46,19 @@ a:-webkit-any-link {
 	
 }
 
+.Apphome {
+    margin: 0 auto;
+    max-width: 840px;
+    background-color: #fff;
+    box-shadow: 0 0 16px rgb(32 43 74 / 32%);
+    width: 100%;
+	padding-bottom: 75px;
+	
+	overflow-x: hidden;
+    overflow-y: auto;
+	
+}
+
 .holds-the-iframe {
 /*    background: url(../images/bg.gif);*/
 	background-color: #f1cd13;
