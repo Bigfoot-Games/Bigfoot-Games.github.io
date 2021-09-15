@@ -65,9 +65,9 @@ $( "#mute" ).click(function() {
 	
 });
 
-window.addEventListener("message", function(message){
+window.addEventListener('message', (event) => {
 	
-	if (e.origin == 'https://giphy-game.herokuapp.com' || e.origin == 'https://e-a-c.herokuapp.com' || e.origin == 'https://flipsee.herokuapp.com') {
+	if (event.origin == 'https://giphy-game.herokuapp.com' || event.origin == 'https://e-a-c.herokuapp.com' || event.origin == 'https://flipsee.herokuapp.com') {
 	
 		if(message.data == 'displayad'){
 			var currentTime = (new Date().getTime()) / 1000;
