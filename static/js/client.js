@@ -66,30 +66,36 @@ $( "#mute" ).click(function() {
 });
 
 window.addEventListener("message", function(message){
-	if(message.data == 'displayad'){
-		var currentTime = (new Date().getTime()) / 1000;
+	
+	if (e.origin == 'https://giphy-game.herokuapp.com' || e.origin == 'https://e-a-c.herokuapp.com' || e.origin == 'https://flipsee.herokuapp.com') {
+	
+		if(message.data == 'displayad'){
+			var currentTime = (new Date().getTime()) / 1000;
 
-		//Check if this is the first ad since reload
-		if(firstad == true){
-			createAd();
-			adcontainer.style.display = "table"; //Show Ad
-			gameframe.style.opacity = 0; //Hide game
-			firstad = 'false';
-		//Check if an ad has played in the last 5 minutes
-		} else if (currentTime - lastadtimestamp >= 300) {
-			createAd();
-			adcontainer.style.display = "table"; //Show Ad
-			gameframe.style.opacity = 0; //Hide game
+			//Check if this is the first ad since reload
+			if(firstad == true){
+				createAd();
+				adcontainer.style.display = "table"; //Show Ad
+				gameframe.style.opacity = 0; //Hide game
+				firstad = 'false';
+			//Check if an ad has played in the last 5 minutes
+			} else if (currentTime - lastadtimestamp >= 300) {
+				createAd();
+				adcontainer.style.display = "table"; //Show Ad
+				gameframe.style.opacity = 0; //Hide game
+			} else {
+				return;
+			}
+		} else if (message.data == 'hidead') {
+			//Clear open ad
+			adcontainer.style.display = "none"; //Hide Ad
+			gameframe.style.opacity = 1; //Show game
+			adtimerdisplay.style.display = "block"; //Show ad timer
+			adtimerdisplay.innerHTML = "5";
+			adbtnpos.innerHTML = '';
 		} else {
 			return;
 		}
-	} else if (message.data == 'hidead') {
-		//Clear open ad
-		adcontainer.style.display = "none"; //Hide Ad
-		gameframe.style.opacity = 1; //Show game
-		adtimerdisplay.style.display = "block"; //Show ad timer
-		adtimerdisplay.innerHTML = "5";
-		adbtnpos.innerHTML = '';
 	}
 });
 	

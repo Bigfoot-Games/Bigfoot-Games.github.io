@@ -99,6 +99,7 @@ a:-webkit-any-link {
     display: flex;
     flex-direction: column;
     position: relative;
+	overflow: hidden;
 }
 
 .PlayGame-header-button {
@@ -350,7 +351,7 @@ a:-webkit-any-link {
 #adsubtextcontainer {
 	width: 100%;
 	position: absolute;
-    bottom: 20px;
+    bottom: 10px;
 	left: 0px;
 	z-index: 1;
 }
@@ -368,6 +369,7 @@ a:-webkit-any-link {
 
 #covfefe {
 	color: rgb(201 82 200);
+	font-size: 9px;
 }
 
 .adtitle {
@@ -383,6 +385,14 @@ a:-webkit-any-link {
     margin-bottom: 20px;
 }
 
+/* Slideshow */
+.mySlides {
+	display: none;
+	margin: auto;
+	height: 300px;
+    width: 300px;
+}
+
 @media only screen and (max-width: 550px) {
 	.Loadlogo {
 		width: 60%;
@@ -391,15 +401,19 @@ a:-webkit-any-link {
 
 @media only screen and (max-height: 821px) {
 	
+.dot {
+	margin-bottom: 5px;
+}
+	
 #adtext {
-    left: 12px;
-    top: 70px;
+    left: 7px;
+    top: 53px;
     font-size: 12px;
 }
 	
 .adtitle {
-    padding-bottom: 11px;
-    padding-top: 42px;
+    padding-bottom: 0px;
+    padding-top: 15px;
     font-size: 12px;
 }
 	
@@ -430,7 +444,7 @@ a:-webkit-any-link {
 }
 
 #adsubtext {
-    font-size: 9px;
+    font-size: 8px;
     width: 270px;
 }
 	
@@ -442,6 +456,10 @@ a:-webkit-any-link {
 
 @media only screen and (max-width: 799px) {
 	
+.dot {
+	margin-bottom: 5px;
+}
+	
 .buttonstart {
 	margin-top: 9px;
     width: 160px;
@@ -450,14 +468,14 @@ a:-webkit-any-link {
 }
 	
 #adtext {
-    left: 12px;
-    top: 70px;
+    left: 7px;
+    top: 53px;
     font-size: 12px;
 }
 	
 .adtitle {
-    padding-bottom: 11px;
-    padding-top: 42px;
+    padding-bottom: 0px;
+    padding-top: 15px;
     font-size: 12px;
 }
 	
@@ -488,7 +506,7 @@ a:-webkit-any-link {
 }
 
 #adsubtext {
-    font-size: 9px;
+    font-size: 8px;
     width: 270px;
 }
 	
@@ -500,14 +518,6 @@ a:-webkit-any-link {
     margin-top: 13px;
 }
 	
-}
-
-/* Slideshow */
-.mySlides {
-	display: none;
-	margin: auto;
-	height: 300px;
-    width: 300px;
 }
 
 img {vertical-align: middle;}
@@ -523,9 +533,9 @@ img {vertical-align: middle;}
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 100px;
   width: auto;
-  padding: 16px;
+  padding: 10px;
   margin-top: -22px;
   color: rgb(201 82 200);
   font-weight: bold;
