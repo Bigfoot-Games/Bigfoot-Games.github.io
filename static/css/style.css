@@ -75,7 +75,7 @@ a:-webkit-any-link {
     margin: auto;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 67%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -461,10 +461,10 @@ a:-webkit-any-link {
 }
 	
 .buttonstart {
-	margin-top: 9px;
-    width: 160px;
+	margin-top: 14px;
+    width: 150px;
     font-size: 15px;
-	height: 45px;
+    height: 42px;
 }
 	
 #adtext {
@@ -502,7 +502,7 @@ a:-webkit-any-link {
     height: 10px;
     width: 10px;
     margin: 0 5px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 #adsubtext {
