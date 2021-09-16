@@ -75,7 +75,7 @@ a:-webkit-any-link {
     margin: auto;
     position: absolute;
     left: 50%;
-    top: 67%;
+    top: 45%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -643,7 +643,7 @@ img {vertical-align: middle;}
 .dot-spin {
 
   left: 50%;
-  top: 65%;
+  top: 60%;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
