@@ -393,133 +393,6 @@ a:-webkit-any-link {
     width: 300px;
 }
 
-@media only screen and (max-width: 550px) {
-	.Loadlogo {
-		width: 60%;
-	}
-}
-
-@media only screen and (max-height: 821px) {
-	
-.dot {
-	margin-bottom: 5px;
-}
-	
-#adtext {
-    left: 7px;
-    top: 53px;
-    font-size: 12px;
-}
-	
-.adtitle {
-    padding-bottom: 0px;
-    padding-top: 15px;
-    font-size: 12px;
-}
-	
-.slideshow-container {
-    max-width: 330px;
-}
-
-.mySlides {
-    height: 240px;
-    width: 240px;
-}
-	
-.adimage {
-    max-height: 240px;
-    max-width: 240px;
-    margin-bottom: 20px;
-}
-	
-.prev, .next {
-    font-size: 24px;
-}
-	
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    margin-bottom: 12px;
-}
-
-#adsubtext {
-    font-size: 8px;
-    width: 270px;
-}
-	
-#adtimerdisplay {
-	font-size: 15px;
-}
-	
-}
-
-@media only screen and (max-width: 799px) {
-	
-.dot {
-	margin-bottom: 5px;
-}
-	
-.buttonstart {
-	margin-top: 14px;
-    width: 150px;
-    font-size: 15px;
-    height: 42px;
-}
-	
-#adtext {
-    left: 7px;
-    top: 53px;
-    font-size: 12px;
-}
-	
-.adtitle {
-    padding-bottom: 0px;
-    padding-top: 15px;
-    font-size: 12px;
-}
-	
-.slideshow-container {
-    max-width: 330px;
-}
-
-.mySlides {
-    height: 240px;
-    width: 240px;
-}
-	
-.adimage {
-    max-height: 240px;
-    max-width: 240px;
-    margin-bottom: 20px;
-}
-	
-.prev, .next {
-    font-size: 24px;
-}
-	
-.dot {
-    height: 10px;
-    width: 10px;
-    margin: 0 5px;
-    margin-bottom: 10px;
-}
-
-#adsubtext {
-    font-size: 8px;
-    width: 270px;
-}
-	
-#adtimerdisplay {
-	font-size: 15px;
-}
-	
-#btnSelect {
-    margin-top: 13px;
-}
-	
-}
-
 img {vertical-align: middle;}
 
 /* Slideshow container */
@@ -684,4 +557,133 @@ img {vertical-align: middle;}
   87.5% {
     box-shadow: 0 -18px 0 0 #0e723a, 12.72984px -12.72984px 0 0 #0e723a, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 #0e723a;
   }
+}
+
+
+@media only screen and (max-width: 550px) {
+	.Loadlogo {
+		width: 60%;
+	}
+}
+
+@media only screen and (max-height: 821px) {
+	
+.dot {
+	margin-bottom: 5px;
+}
+	
+#adtext {
+    left: 7px;
+    top: 53px;
+    font-size: 12px;
+}
+	
+.adtitle {
+    padding-bottom: 0px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+	
+.slideshow-container {
+    max-width: 330px;
+}
+
+.mySlides {
+    height: 240px;
+    width: 240px;
+}
+	
+.adimage {
+    max-height: 240px;
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+	
+.prev, .next {
+    font-size: 24px;
+}
+	
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    margin-bottom: 12px;
+}
+
+#adsubtext {
+    font-size: 8px;
+    width: 270px;
+}
+	
+#adtimerdisplay {
+	font-size: 15px;
+}
+	
+}
+
+
+@media only screen and (max-width: 799px) {
+	
+.dot {
+	margin-bottom: 5px;
+}
+	
+.buttonstart {
+	margin-top: 14px;
+    width: 150px;
+    font-size: 15px;
+    height: 42px;
+}
+	
+#adtext {
+    left: 7px;
+    top: 53px;
+    font-size: 12px;
+}
+	
+.adtitle {
+    padding-bottom: 0px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+	
+.slideshow-container {
+    max-width: 330px;
+}
+
+.mySlides {
+    height: 240px;
+    width: 240px;
+}
+	
+.adimage {
+    max-height: 240px;
+    max-width: 240px;
+    margin-bottom: 20px;
+}
+	
+.prev, .next {
+    font-size: 24px;
+}
+	
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    margin-bottom: 10px;
+}
+
+#adsubtext {
+    font-size: 8px;
+    width: 270px;
+}
+	
+#adtimerdisplay {
+	font-size: 15px;
+}
+	
+#btnSelect {
+    margin-top: 13px;
+}
+	
 }
