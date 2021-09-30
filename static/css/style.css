@@ -93,6 +93,14 @@ a:-webkit-any-link {
 	
 }
 
+.wordplay{
+	background: #ffffff !important;
+}
+
+.wordplayinnertitle{
+    background-color: #1aace4;
+}
+
 .PlayGame {
     height: 100%;
     width: 100%;
