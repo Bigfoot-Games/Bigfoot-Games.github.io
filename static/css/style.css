@@ -98,7 +98,7 @@ a:-webkit-any-link {
 }
 
 .wordplayinnertitle{
-    background-color: #1aace4;
+    background-color: #1aace4 !important;
 }
 
 .PlayGame {
